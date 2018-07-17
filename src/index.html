@@ -18,7 +18,7 @@
 
   <body>
     <header id="header">
-      <img src="./../assets/logo.png" id="header-img">
+      <img src="./../assets/logo.png" id="header-img" alt="Logo - pen nib on the mustard background">
       <nav id="nav-bar">
         <ul>
           <li><a href="#about" class="nav-link">About</a></li>
@@ -30,25 +30,25 @@
     </header>
     <main>
       <section>
-        <h2 id="#about">About</h2>
+        <h2 id="about">About</h2>
         <div class="flex-container">
           <article>
             <figure>
-              <img src="../assets/bookshelf.jpg" alt="">
+              <img src="../assets/bookshelf-mini.jpg" alt="White bookshelf full of colourful books">
             </figure>
             <h3>Who are we?</h3>
             <p>We are the group of professional writers who want to help other people to plan, create, finish and publish their original works. No matter if writing is already your passion or you feel you need to improve or even if you just want to try it - we all have been there, where you are now. And we know how to make another step.</p>
           </article>
           <article>
             <figure>
-              <img src="../assets/paper.jpg" alt="">
+              <img src="../assets/paper-mini.jpg" alt="Human's hand with a pencil starting to write something in a blank notebook">
             </figure>
             <h3>Why are we doing this?</h3>
             <p>We have always wondered how it would be if more people decide to take a chance to tell their little stories - whether fictional or not. We cannot fix the past but we can try to improve the present and the future. But writing is not as easy as it seems. Each of us has their own little tricks to improve our works. We can share those tricks with you! The world deserves to discover your stories.</p>
           </article>
           <article>
             <figure>
-              <img src="../assets/contract.jpg" alt="">
+              <img src="../assets/contract-mini.jpg" alt="Table with two coffee mugs, notebook and a contract paper, hands of two people who are discussing">
             </figure>
             <h3>Why to choose us?</h3>
             <p>We have experience in creating over 20 books, mainly of fiction-genres: fantasy, mystery, crime, drama and historical. We will tach you how to analize publishers' offers and how to find the best agent. We will tell you abouyt the different ways of publishing and help you to choose which option would be the most suitable for your and your work.</p>
@@ -56,24 +56,37 @@
         </div>
       </section>
       <section>
-        <h2 id="Scriptorium">Scriptorium</h2>
-        <p>Scriptorium was the place in medieval monastery where the books were edited, written and decorated by the monks. Tha place took its name from latin scribere which means to write.</p>
-        <figure class="vid">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VBxo51GiGiU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>Video not supported</iframe>
-            <figcaption>Watch dr Sally Dormer and her interesting lecture about creation, writing and illuminating books in the middle ages.</figcaption>
-          </figure>
+        <h2 id="scriptorium">Scriptorium</h2>
+        <p>Scriptorium was the place in medieval monastery where the books were edited, written and decorated by the monks. Tha place took its name from latin scribere which means to write. Watch dr Sally Dormer and her interesting lecture about creation, writing and illuminating books in the middle ages.</p>
+          <div class="vid">
+            <iframe id="video"  height="315" src="https://www.youtube.com/embed/VBxo51GiGiU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>Video not supported</iframe>
+          </div>
         </section>
       <section>
         <h2 id="contact">Contact</h2>
         <fieldset>
           <legend>Subscribe to get free pdf guide with useful tips for writing begginers!</legend>
-          <form id="survey-form" action="#" method="POST">
-            <label for="email" id="email-label">* Email:</label>
-            <input type="email" name="email" id="email" placeholder="your email" required>
-            <label for="message" id="message-label">Comments:</label>
-            <textarea nam="message" id="message" width="16" height="4" placeholder="Comments">
-            </textarea>
-            <button type="submit" name="submit" id="submit">Submit form</button>
+          <form id="form" action="#" method="POST">
+            <div><!-- class="input-container">
+              <div class="lab-cont">-->
+                <label for="email" id="email-label">* Email:</label>
+              <!--</div>
+              <div class="int-cont">-->
+                <input type="email" name="email" id="email" placeholder="your email" required>
+              <!--</div>-->
+            </div>
+            <div> <!--class="input-container">
+              <div class="lab-cont">-->
+              <label for="message" id="message-label">Comments:</label>
+              <!--</div>
+              <div class="int-cont">-->
+              <textarea name="message" id="message" width="16" height="4" placeholder="Comments">
+              </textarea>
+            <!--</div>-->
+            </div>
+            <div>
+              <input type="button" name="submit" id="submit" value="Submit form">
+            </div>
           </form>
         </fieldset>
       </section>
@@ -112,5 +125,8 @@
         <a href="https://icons8.com" target="_blank">icons8.com</a>,
         <a href="https://fontawesome.com" target="_blank">fontawesome.com</a>.</p>
     </footer>
+    <!--
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    -->
   </body>
 </html>
