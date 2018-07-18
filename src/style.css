@@ -235,3 +235,31 @@ input[type="button"]:hover {
 .fab:hover {
   color: #c8102e;
 }
+
+
+/*--------------------------FOOTER-----------------------------------*/
+
+footer {
+  width: 100%;
+  background-color: #323031;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #fff;
+  padding: 1rem;
+}
+
+footer a {
+  color: #ffc857;
+}
+
+footer a:hover {
+  color: #bbced3;
+}
+
+footer div {
+  width: 30%;
+}
+
+.toplink {
+  
+}
