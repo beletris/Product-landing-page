@@ -49,17 +49,6 @@ header {
   box-shadow: 0 0 50px 20px #000;
 }
 
-ul {
-  height: 4rem;
-  padding-bottom: 1rem;
-  list-style-type: none;
-}
-
-li {
-  display: inline;
-  padding: 0 2rem;
-}
-
 nav {
   position: absolute;
   bottom: 0;
@@ -79,6 +68,17 @@ nav a {
 
 nav a:hover {
   color: #bbced3;
+}
+
+ul {
+  height: 4rem;
+  padding-bottom: 1rem;
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+  padding: 0 2rem;
 }
 
 h2 {
@@ -106,11 +106,12 @@ section {
   width: 100%;
 }
 
-.flex-container {
+/*--------------------------ABOUT---------------------------------*/
+
+.flex-container-between {
   display: flex;
   justify-content: space-between;
 }
-
 
 article {
   width: 30%;
@@ -126,12 +127,14 @@ article img {
   height: auto;
 }
 
-p {
-  padding: 1rem;
+article > p {
+  padding: 1rem 1rem 2rem 1rem;
 }
 
+/*----------------------SCRIPTORIUM-----------------*/
+
 section > p {
-  padding-top: 0;
+  padding: 0 1rem 2rem 1rem;
 }
 
 .vid {
@@ -215,7 +218,20 @@ input[type="button"]:hover {
 
 /*---------------------------------FOLLOW--------------------------------*/
 
-.flex-container2 {
+.flex-container-around {
   display: flex;
   justify-content: space-around;
+}
+
+.flex-container-around div {
+  margin: 1rem 1rem 3rem 1rem;
+}
+
+.fab {
+  font-size: 5rem;
+  color: #323031;
+}
+
+.fab:hover {
+  color: #c8102e;
 }
