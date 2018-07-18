@@ -9,10 +9,8 @@
 }
 
 body {
-  margin: 0;
   padding: 0;
   font-family: "Catamaran", Trebuchet, sans-serif;
-  font-size: 1.5rem;
   color: #323031;
   line-height: 2.5rem;
   background-color: #ececec;
@@ -21,6 +19,17 @@ body {
 a {
   text-decoration: none;
 }
+
+body, h3, ul, p, figure, fieldset {
+  margin: 0;
+}
+
+body, input {
+  font-size: 1.5rem;
+}
+
+
+/*--------------------------------HEADER & NAV---------------------------*/
 
 header {
   width: 100%;
@@ -41,11 +50,9 @@ header {
 }
 
 ul {
-  list-style-type: none;
   height: 4rem;
   padding-bottom: 1rem;
-  margin: 0;
-  /*background: navy;*/
+  list-style-type: none;
 }
 
 li {
@@ -57,11 +64,9 @@ nav {
   position: absolute;
   bottom: 0;
   top: 500px;
-  text-align: center;
-  height: 64px;
   width: 100%;
-  /*background-color: #121212;*/
-
+  height: 64px;
+  text-align: center;
 }
 
 nav a {
@@ -70,7 +75,6 @@ nav a {
   color: #ffc857;
   text-transform: lowercase;
   text-shadow: 1px 1px 40px #000;
-  /*color: #c8102e; #177e89*/
 }
 
 nav a:hover {
@@ -87,7 +91,6 @@ h2 {
 }
 
 h3 {
-  margin: 0;
   padding: 1rem 1rem 0 1rem;
   color: #c8102e;
 }
@@ -116,8 +119,6 @@ article {
 
 figure {
   width: 100%;
-  margin: 0;
-
 }
 
 article img {
@@ -126,7 +127,6 @@ article img {
 }
 
 p {
-  margin: 0;
   padding: 1rem;
 }
 
@@ -162,8 +162,7 @@ section > p {
 fieldset {
   background-color: #fff;
   border: 0;
-  margin: 0;
-  padding: 0;
+  padding: 0 0 2rem 0;
 }
 
 fieldset div {
@@ -183,22 +182,16 @@ form {
   padding: 0;
 }
 
-input {
-  background-color: #ffc857;
-  border: 5px solid #ffc857;
-  margin: 0 2rem;
-  padding: 0.5rem;
-  text-align: left;
-  font-family: "Catamaran", Trebuchet, sans-serif;
-  font-size: 1.5rem;
+label {
+  text-align: right;
 }
 
-input:focus {
-  border-color: #177e89;
-}
-input[type="button"] {
-  color: #323031;
-  font-weight: bold;
+input {
+  margin: 0 2rem;
+  padding: 0.5rem;
+  background-color: #ffc857;
+  border: 5px solid #ffc857;
+  font-family: "Catamaran", Trebuchet, sans-serif;
 }
 
 input[type="email"]:focus:invalid {
@@ -209,10 +202,18 @@ input[type="email"]:focus:valid {
   border-color: #177e89;
 }
 
-
-label {
-  text-align: right;
+input[type="button"] {
+  color: #323031;
+  font-weight: bold;
 }
+
+input[type="button"]:hover {
+  cursor: pointer;
+  border-color: #177e89;
+}
+
+
+/*---------------------------------FOLLOW--------------------------------*/
 
 .flex-container2 {
   display: flex;
