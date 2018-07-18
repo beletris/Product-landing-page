@@ -1,7 +1,7 @@
 /*TO DO
 - cleaning
-- media query
-- change img urls to https cloudinary version*/
+- media queries
+- change bg header to https cloudinary version*/
 
 
 @import url('https://fonts.googleapis.com/css?family=Chela+One');
@@ -22,30 +22,46 @@ body {
   background-color: #ececec;
 }
 
-a {
-  text-decoration: none;
+header, nav, footer, section, figure, article img, iframe, legend {
+  width: 100%;
+}
+
+article, footer div {
+  width: 30%;
 }
 
 body, h3, ul, p, figure, fieldset {
   margin: 0;
 }
 
+fieldset, article, legend {
+  background-color: #fff;
+}
+
+header, nav, .video-container, fieldset div {
+  text-align: center;
+}
+
 body, input {
   font-size: 1.5rem;
 }
 
+a {
+  text-decoration: none;
+}
+
+nav a:hover, footer a:hover {
+  color: #bbced3;
+}
 
 /*--------------------------------HEADER & NAV---------------------------*/
 
 header {
-  width: 100%;
   height: 600px;
   background-image: url(../assets/rawpixel-256643-unsplash.jpg);
   background-position: top center;
   background-size: cover;
-  /*background-color: yellow;*/
   padding-bottom: 0;
-  text-align: center;
 }
 
 #header-img {
@@ -59,9 +75,7 @@ nav {
   position: absolute;
   bottom: 0;
   top: 530px;
-  width: 100%;
   height: 64px;
-  text-align: center;
 }
 
 nav a {
@@ -70,10 +84,6 @@ nav a {
   color: #ffc857;
   text-transform: lowercase;
   text-shadow: 1px 1px 40px #000;
-}
-
-nav a:hover {
-  color: #bbced3;
 }
 
 ul {
@@ -109,7 +119,6 @@ main {
 
 section {
   padding: 2rem;
-  width: 100%;
 }
 
 /*--------------------------ABOUT---------------------------------*/
@@ -119,17 +128,7 @@ section {
   justify-content: space-between;
 }
 
-article {
-  width: 30%;
-  background-color: #fff;
-}
-
-figure {
-  width: 100%;
-}
-
 article img {
-  width: 100%;
   height: auto;
 }
 
@@ -143,34 +142,21 @@ section > p {
   padding: 0 1rem 2rem 1rem;
 }
 
-.vid {
-  /*overflow:hidden;
-  padding-bottom:56.25%;
-  position:relative;
-  height:0;*/
-  text-align: center;
+.video-container {
   justify-content: center;
   display: flex;
 
 }
 
-.vid iframe {
-  /*left:0;
-  top:0;
-  width:50%;
-  height: auto;
-  margin: 0 auto;
-  position:absolute;*/
+iframe {
   max-width: 560px;
-  width: 100%;
-  padding-top:2rem;
+  padding-top: 2rem;
   border: 0;
 }
 
 /* ---------------------------------FORM ----------------------------------*/
 
 fieldset {
-  background-color: #fff;
   border: 0;
   padding: 0 0 2rem 0;
 }
@@ -178,14 +164,11 @@ fieldset {
 fieldset div {
   position: relative;
   margin-bottom: 2rem;
-  text-align: center;
 }
 
 legend {
-  width: 100%;
   margin: 0 0 1rem 0;
   padding: 1rem;
-  background-color: #fff;
 }
 
 form {
@@ -249,7 +232,6 @@ input[type="submit"]:hover {
 /*--------------------------FOOTER-----------------------------------*/
 
 footer {
-  width: 100%;
   background-color: #323031;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -259,14 +241,6 @@ footer {
 
 footer a {
   color: #ffc857;
-}
-
-footer a:hover {
-  color: #bbced3;
-}
-
-footer div {
-  width: 30%;
 }
 
 .toplink {
