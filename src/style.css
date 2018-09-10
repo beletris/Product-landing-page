@@ -58,6 +58,7 @@ nav a:hover, footer a:hover {
 
 header {
   height: 600px;
+  position: relative;
   background-image: url(../assets/rawpixel-256643-unsplash.jpg);
   background-position: top center;
   background-size: cover;
@@ -65,17 +66,18 @@ header {
 }
 
 #header-img {
-  margin: 350px auto 0 auto;
+  margin: 400px auto 0 auto;
   -moz-box-shadow: 0 0 50px 20px #000;
   -webkit-box-shadow: 0 0 50px 20px #000;
   box-shadow: 0 0 50px 20px #000;
 }
 
 nav {
-  position: absolute;
-  bottom: 0;
-  top: 530px;
-  height: 64px;
+  position: fixed;
+  top: 0;
+  height: 70px;
+  padding-top: 1rem;
+  z-index: 5;
 }
 
 nav a {
@@ -84,6 +86,12 @@ nav a {
   color: #ffc857;
   text-transform: lowercase;
   text-shadow: 1px 1px 40px #000;
+}
+
+.sticky-dark {
+  position: fixed;
+  top: 0;
+  background-color: #323031;
 }
 
 ul {
@@ -210,12 +218,12 @@ input[type="submit"]:hover {
 
 /*---------------------------------FOLLOW--------------------------------*/
 
-.flex-container-around {
+.flex-container-footer, .flex-container-icon {
   display: flex;
   justify-content: space-around;
 }
 
-.flex-container-around div {
+.flex-container-footer div, .flex-container-icon div {
   margin: 1rem 1rem 3rem 1rem;
 }
 
@@ -244,5 +252,35 @@ footer a {
 }
 
 .toplink {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+
+/*------------------------MEDIA QERIES------------------------------*/
+
+@media (max-width: 700px) {
+
+  .flex-container-between,
+  .flex-container-footer {
+    flex-flow: column;
+  }
+
+  footer {
+    padding: 0.5rem;
+    line-height: 1.2rem;
+  }
+
+  article, footer div {
+    width: 90%;
+  }
+
+  footer, .credit {
+    text-align: center;
+  }
+
+
+
+
 
 }

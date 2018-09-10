@@ -1,26 +1,33 @@
 /*TO DO
-- smooth scrolling
-- scroll to top
 - navigation bar position fixed
-
-
  */
 
 //adding element manually - because IE
 document.createElement("main");
 
-//smooth scrolling
-let toTop = document.getElementById("to-top"),
-    scrollTimer,
+
+//navbar fixed
+const navBar = document.getElementById("nav-bar");
+
+window.onscroll = function scrollToStick() {
+  if (window.pageYOffset > 530) {  // height of header - height of navbar
+    navBar.classList.add("sticky-dark");
+  } else {
+    navBar.classList.remove("sticky-dark");
+  };
+};
+
+//scroll to top
+const toTop = document.getElementById("to-top");
+let scrollTimer,
     scrollValue;
 
-let scrollToTop = function(event) {
+const scrollToTop = function(event) {
   event.preventDefault();
   scrollValue = window.scrollY;
   scrollTimer = setInterval(scrollStep, 10);
 };
-
-let scrollStep = function() {
+const scrollStep = function() {
   scrollValue -= 30;
   window.scrollTo(0, scrollValue);
   if (scrollValue <= 0) {
