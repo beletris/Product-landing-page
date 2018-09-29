@@ -84,6 +84,7 @@ header {
   height: 600px;
   position: relative;
   padding-bottom: 0;
+  margin-bottom: -3rem;
 }
 
 /*.bg-parent and .bg to show background and avoiding loading on mobiles*/
@@ -155,7 +156,14 @@ h2 {
   font-weight: 700;
   letter-spacing: 0.5rem;
   margin: 0 0 2rem 0;
-  padding: 2rem 0 0 0;
+  padding: 0;
+}
+
+/*h2:before to link to the anchor a little above due to visibility of sticy navbar*/
+h2:before {
+  content: "";
+  height: 6rem;
+  display: block;
 }
 
 h3 {
@@ -170,7 +178,7 @@ main {
 }
 
 section {
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
 }
 
 /*--------------------------ABOUT---------------------------------*/
@@ -290,6 +298,7 @@ footer {
   font-size: 1rem;
   line-height: 1.5rem;
   color: #fff;
+  margin-top: 3rem;
   padding: 1rem;
 }
 
