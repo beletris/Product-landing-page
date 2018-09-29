@@ -1,7 +1,7 @@
 /*TO DO
 - cleaning
 - media queries
-- change bg header to https cloudinary version*/
+*/
 
 
 @import url('https://fonts.googleapis.com/css?family=Chela+One');
@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth; /*magical smooth-scrolling, ofc does not work in IE*/
+}
+
 body {
   padding: 0;
   font-family: "Catamaran", Trebuchet, sans-serif;
@@ -22,27 +26,46 @@ body {
   background-color: #ececec;
 }
 
-header, nav, footer, section, figure, article img, iframe, legend {
+header,
+nav,
+section,
+figure,
+article img,
+iframe,
+legend,
+footer {
   width: 100%;
 }
 
-article, footer div {
+article,
+footer div {
   width: 30%;
 }
 
-body, h3, ul, p, figure, fieldset {
+body,
+h3,
+ul,
+p,
+figure,
+fieldset {
   margin: 0;
 }
 
-fieldset, article, legend {
+fieldset,
+article,
+legend {
   background-color: #fff;
 }
 
-header, nav, .video-container, fieldset div {
+header,
+nav,
+fieldset div,
+.video-container {
   text-align: center;
 }
 
-body, input {
+body,
+input {
   font-size: 1.5rem;
 }
 
@@ -50,7 +73,8 @@ a {
   text-decoration: none;
 }
 
-nav a:hover, footer a:hover {
+nav a:hover,
+footer a:hover {
   color: #bbced3;
 }
 
@@ -59,17 +83,37 @@ nav a:hover, footer a:hover {
 header {
   height: 600px;
   position: relative;
-  background-image: url(../assets/rawpixel-256643-unsplash.jpg);
-  background-position: top center;
-  background-size: cover;
   padding-bottom: 0;
 }
 
+/*.bg-parent and .bg to show background and avoiding loading on mobiles*/
+
+.bg-parent {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  z-index: -1;
+}
+
+.bg {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  background-image: url("https://res.cloudinary.com/grigoriewna/image/upload/v1536771527/FCC_LandingPage/bg-header.jpg");
+  background-position: top center;
+  background-size: cover;
+  z-index: -1;
+}
+
 #header-img {
-  margin: 400px auto 0 auto;
+  position: relative;
+  top: -250px;
+  padding: 0;
+  margin: 0 auto;
   -moz-box-shadow: 0 0 50px 20px #000;
   -webkit-box-shadow: 0 0 50px 20px #000;
   box-shadow: 0 0 50px 20px #000;
+  z-index: 2;
 }
 
 nav {
@@ -218,12 +262,14 @@ input[type="submit"]:hover {
 
 /*---------------------------------FOLLOW--------------------------------*/
 
-.flex-container-footer, .flex-container-icon {
+.flex-container-footer,
+.flex-container-icon {
   display: flex;
   justify-content: space-around;
 }
 
-.flex-container-footer div, .flex-container-icon div {
+.flex-container-footer div,
+.flex-container-icon div {
   margin: 1rem 1rem 3rem 1rem;
 }
 
@@ -259,7 +305,16 @@ footer a {
 
 /*------------------------MEDIA QERIES------------------------------*/
 
+
 @media (max-width: 700px) {
+
+  header {
+    height: 400px;
+  }
+
+  #header-img {
+    margin-top: 200px;
+  }
 
   .flex-container-between,
   .flex-container-footer {
@@ -275,12 +330,89 @@ footer a {
     width: 90%;
   }
 
+  .credit {
+    padding: 0;
+    margin: 0;
+  }
+
   footer, .credit {
     text-align: center;
   }
 
+  h2 {
+    text-align: center;
+    padding: 0;
+    font-size: 2rem;
+  }
+
+  nav {
+    background-color: #323031;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+  li {
+    padding: 0 0.5rem;
+  }
+
+  main,
+  fieldset {
+    width: 100%;
+  }
+  fieldset {
+    padding: 0;
+  }
+
+  footer div {
+    margin: 0;
+  }
+
+  section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  input,
+  label {
+    display: block;
+    margin: 0.5rem auto;
+  }
+
+  label {
+    text-align: center;
+  }
+  .toplink {
+    padding: 1rem;
+  }
+
+  .flex-container-footer div {
+    margin: 0.5rem;
+  }
+
+  .flex-container-between article{
+    width: 100%;
+  }
+
+}
 
 
 
+@media (max-width: 430px) {
+
+  /*hamburger menu*/
+
+  header {
+    height: 70px;
+  }
+
+  #header-img,
+  .bg-parent {
+    display:none;
+  }
 
 }
