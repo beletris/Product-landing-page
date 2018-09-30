@@ -1,9 +1,9 @@
-#FCC Product Landing Page
-##General Info
+# FCC Product Landing Page
+## General Info
 
-##Technology
+## Technology
 HTML, CSS, JS, including both Vanilla JS and jQuery. RWD applied.
 
-##Resources
-###Images
+## Resources
+### Images
 * https://unsplash.com
