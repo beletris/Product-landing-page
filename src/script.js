@@ -21,6 +21,9 @@ window.onscroll = function scrollToStick() {
 //scroll to top
 const toTop = document.getElementById("to-top");
 
+var scrollTimer;
+var scrollValue;
+
 const scrollToTop = function(event) {
   event.preventDefault();
   scrollValue = window.scrollY;
@@ -30,25 +33,47 @@ const scrollToTop = function(event) {
 const scrollStep = function() {
   scrollValue -= 30;
   window.scrollTo(0, scrollValue);
-  if (scrollValue <= 0) {
+  if (scrollValue <= 0 || scrollValue == NaN) {
     clearInterval(scrollTimer);
   };
 };
 
 toTop.addEventListener("click", scrollToTop);
 
-/* The function actually applying the offset
-function offsetAnchor() {
-    if(location.hash.length !== 0) {
-        window.scrollTo(window.scrollX, window.scrollY - 100);
-    }
-}
+//JQUERY
 
-// This will capture hash changes while on the page
-window.addEventListener("hashchange", offsetAnchor);
+jQuery(document).ready(function($) {
+//adding .menu class on small devices
 
-// This is here so that when you enter the page with a hash,
-// it can provide the offset in that case too. Having a timeout
-// seems necessary to allow the browser to jump to the anchor first.
-window.setTimeout(offsetAnchor, 1); // The delay of 1 is arbitrary and may not always work right (although it did in my testing).
-*/
+  var alterClass = function() {
+    let ww = document.body.clientWidth;
+    if (ww <= 430) {
+      $("#nav-bar").addClass("menu");
+    } else if (ww > 430) {
+      $("#nav-bar").removeClass("menu");
+    };
+  };
+  $(window).resize(function(){
+    alterClass();
+  });
+
+  alterClass();
+
+//hamburger jQuery
+  $( ".cross" ).hide();
+  $( ".menu" ).hide();
+  $( ".hamburger" ).click(function() {
+    $( ".menu" ).slideToggle( "slow", function() {
+      $( ".hamburger" ).hide();
+      $( ".cross" ).show();
+    });
+  });
+
+  $( ".cross" ).click(function() {
+    $( ".menu" ).slideToggle( "slow", function() {
+      $( ".cross" ).hide();
+      $( ".hamburger" ).show();
+    });
+  });
+
+});
