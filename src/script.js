@@ -40,6 +40,7 @@ const scrollStep = function() {
 
 toTop.addEventListener("click", scrollToTop);
 
+
 //JQUERY
 
 jQuery(document).ready(function($) {
