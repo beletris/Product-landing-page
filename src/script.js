@@ -1,12 +1,17 @@
-//TO do {
-// - IE, get a hold of yourself;
+/*
+
+TO DO:
+- IE, get a hold of yourself???
+
+*/
 
 //adding element manually - because IE
 document.createElement("main");
 
+
 //navbar fixed
-const navBar = document.getElementById("nav-bar");
-const headBar = document.getElementById("header");
+const navBar = document.getElementById("nav-bar"),
+      headBar = document.getElementById("header");
 
 window.onscroll = function scrollToStick() {
   if (window.pageYOffset > (headBar.clientHeight - navBar.clientHeight)) {  // height of header - height of navbar
@@ -17,12 +22,11 @@ window.onscroll = function scrollToStick() {
 };
 
 
-//for scrolling IE does not work
 //scroll to top
 const toTop = document.getElementById("to-top");
 
-var scrollTimer;
-var scrollValue;
+var scrollTimer,
+    scrollValue;
 
 const scrollToTop = function(event) {
   event.preventDefault();
@@ -42,10 +46,9 @@ toTop.addEventListener("click", scrollToTop);
 
 
 //JQUERY
-
 jQuery(document).ready(function($) {
-//adding .menu class on small devices
 
+//adding .menu class on small devices
   let alterClass = function() {
     let ww = document.body.clientWidth;
     if (ww <= 430) {
