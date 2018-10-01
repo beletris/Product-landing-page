@@ -13,7 +13,7 @@ window.onscroll = function scrollToStick() {
     navBar.classList.add("sticky-dark");
   } else {
     navBar.classList.remove("sticky-dark");
-  };
+  }
 };
 
 
@@ -33,9 +33,9 @@ const scrollToTop = function(event) {
 const scrollStep = function() {
   scrollValue -= 30;
   window.scrollTo(0, scrollValue);
-  if (scrollValue <= 0 || scrollValue == NaN) {
+  if (scrollValue <= 0 || isNaN(scrollValue)) {
     clearInterval(scrollTimer);
-  };
+  }
 };
 
 toTop.addEventListener("click", scrollToTop);
@@ -46,13 +46,13 @@ toTop.addEventListener("click", scrollToTop);
 jQuery(document).ready(function($) {
 //adding .menu class on small devices
 
-  var alterClass = function() {
+  let alterClass = function() {
     let ww = document.body.clientWidth;
     if (ww <= 430) {
       $("#nav-bar").addClass("menu");
     } else if (ww > 430) {
       $("#nav-bar").removeClass("menu");
-    };
+    }
   };
   $(window).resize(function(){
     alterClass();
@@ -60,7 +60,7 @@ jQuery(document).ready(function($) {
 
   alterClass();
 
-//hamburger jQuery
+//hamburger
   $( ".cross" ).hide();
   $( ".menu" ).hide();
   $( ".hamburger" ).click(function() {

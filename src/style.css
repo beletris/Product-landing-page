@@ -497,15 +497,17 @@ footer a {
     z-index: 10000000000000000000000;
   }
 
+
   .small-title a {
+    color: #ffc857;
     display: inline;
     position: relative;
     top: 0.5rem;
     right: 1.5rem;
     font-family: "Chela One", cursive;
     font-size: 1.8rem;
-    color: #ffc857;
     padding-top: 2rem;
+    text-align: center;
   }
 
   .hamburger{
